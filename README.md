@@ -1,25 +1,17 @@
 # Wikipedia ZIM Backup (Kiwix)
-A simple Bash script to download and verify the latest `wikipedia_en_all_maxi_latest.zim`
-from the Kiwix mirror, maintain a few old versions, and keep a `current.zim` symlink.
 
-## Usage
+A robust Bash script to fetch and verify the latest `wikipedia_en_all_maxi_*.zim`.
+Handles mirrors that 404 on HEAD by parsing the directory listing.
+
+## Quick start
 ```bash
-./backup-wikipedia-zim.sh
+chmod +x backup-wikipedia-zim-backup.sh
+./backup-wikipedia-zim-backup.sh
 ```
 
-## Configuration
 Defaults:
 - DEST_DIR=/media/fogcat5/MEDIA/wikipedia
 - KEEP_VERSIONS=4
 - GRAB_TORRENT=1
 
-Override in `.env` or via environment variables.
-
-## Cron Example
-Run weekly at 3:15 AM Sunday:
-```
-15 3 * * 0 /path/to/backup-wikipedia-zim.sh >> /var/log/wikipedia-zim.log 2>&1
-```
-
-## License
-MIT
+Override in `.env` or via exported env vars.

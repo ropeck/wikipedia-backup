@@ -4,5 +4,8 @@ Description=Backup Wikipedia ZIM (Kiwix)
 [Service]
 Type=oneshot
 WorkingDirectory=/opt/wikipedia-zim-backup
-ExecStart=/opt/wikipedia-zim-backup/backup-wikipedia-zim.sh
+EnvironmentFile=-/opt/wikipedia-zim-backup/.env
+ExecStart=/opt/wikipedia-zim-backup/backup-wikipedia-zim-backup.sh
 Nice=10
+IOSchedulingClass=best-effort
+IOSchedulingPriority=7
