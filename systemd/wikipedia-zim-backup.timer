@@ -1,0 +1,10 @@
+[Unit]
+Description=Run Wikipedia ZIM Backup weekly
+
+[Timer]
+OnCalendar=Sun 03:15
+Persistent=true
+RandomizedDelaySec=10m
+
+[Install]
+WantedBy=timers.target

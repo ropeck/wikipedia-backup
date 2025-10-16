@@ -1,0 +1,8 @@
+[Unit]
+Description=Backup Wikipedia ZIM (Kiwix)
+
+[Service]
+Type=oneshot
+WorkingDirectory=/opt/wikipedia-zim-backup
+ExecStart=/opt/wikipedia-zim-backup/backup-wikipedia-zim.sh
+Nice=10
